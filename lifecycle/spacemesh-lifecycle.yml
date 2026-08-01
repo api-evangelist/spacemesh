@@ -1,0 +1,35 @@
+generated: '2026-07-21'
+method: derived
+source: https://github.com/spacemeshos/api, https://github.com/spacemeshos/go-spacemesh/releases
+versioning:
+  scheme: uri-path-package
+  versions:
+    - name: v1
+      status: legacy
+      note: original spacemesh.v1 gRPC services (node, mesh, tx, smesher, global_state, admin, debug)
+    - name: v2alpha1
+      status: alpha
+    - name: v2beta1
+      status: beta
+      note: current generation REST-friendly gateway (GET for reads)
+  current: v2beta1
+node_releases:
+  latest_stable: v1.8.3
+  latest_stable_date: '2025-04-15'
+  source: https://github.com/spacemeshos/go-spacemesh/releases
+deprecation:
+  policy_url: null
+  sunset_header: false
+sla:
+  url: null
+status_page: null
+project_status:
+  state: dormant
+  evidence:
+    - spacemesh.io and spacemesh.network web/API domains are parked (above.com for-sale)
+    - last go-spacemesh stable release v1.8.3 dated 2025-04-15 (>1yr before this pass)
+    - public API hosts (api/testnet-api.spacemesh.network) resolve to a parking IP
+  note: >-
+    The protocol, node software, API design (proto + swagger) and GitHub org
+    remain public and open source; there is no live hosted public API endpoint.
+deprecated_operations: []

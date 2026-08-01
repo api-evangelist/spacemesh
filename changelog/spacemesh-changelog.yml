@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/spacemeshos/go-spacemesh/releases
+scheme: semver (git tags on go-spacemesh)
+current_version: v1.8.3
+notes: >-
+  The node software (go-spacemesh) is the release train; the api repo tracks
+  API design. `node-split-*` are prerelease builds. The most recent stable
+  release is over a year old relative to this pass, consistent with the
+  project's dormant status.
+entries:
+  - version: v1.8.3
+    date: '2025-04-15'
+    prerelease: false
+  - version: v1.8.2
+    date: '2025-03-26'
+    prerelease: false
+  - version: v1.8.1
+    date: '2025-03-17'
+    prerelease: false
+  - version: node-split-1.0.19
+    date: '2025-04-16'
+    prerelease: true

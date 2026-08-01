@@ -1,0 +1,68 @@
+generated: '2026-07-21'
+method: derived
+source: grpc/spacemesh/v2alpha1/*.proto
+notes: >-
+  Entity-relationship graph derived from the v2alpha1 protobuf messages. Field
+  names in `via` are verbatim from the .proto definitions. Spacemesh is a
+  proof-of-space-time L1: layers contain a block, transactions live in blocks
+  and mutate account state, smeshers publish activations (ATXs) and earn rewards.
+entities:
+  - name: Account
+    key: address (bech32)
+    fields: [address, balance, counter/nonce, template]
+  - name: Transaction
+    key: id (hash)
+    fields: [principal, template, nonce, contents, block]
+  - name: Layer
+    key: number
+    fields: [number, status, state_hash, block]
+  - name: Block
+    key: id (hash)
+  - name: Activation
+    key: id (ATX id)
+    fields: [smesher_id, coinbase, epoch]
+  - name: Reward
+    fields: [layer, total, layer_reward, coinbase, smesher]
+  - name: MalfeasanceProof
+    fields: [smesher_id, domain, proof]
+  - name: Node
+    fields: [status, sync, peers]
+  - name: Network
+    fields: [genesis_time, layer_duration, network_id]
+relationships:
+  - from: Transaction
+    to: Account
+    kind: belongs_to
+    via: principal
+  - from: Transaction
+    to: Block
+    kind: belongs_to
+    via: block
+  - from: Layer
+    to: Block
+    kind: has_one
+    via: block
+  - from: Block
+    to: Transaction
+    kind: has_many
+    via: transactions
+  - from: Reward
+    to: Layer
+    kind: belongs_to
+    via: layer
+  - from: Reward
+    to: Account
+    kind: belongs_to
+    via: coinbase
+  - from: Reward
+    to: Activation
+    kind: belongs_to
+    via: smesher
+  - from: Activation
+    to: Account
+    kind: belongs_to
+    via: coinbase
+  - from: MalfeasanceProof
+    to: Activation
+    kind: belongs_to
+    via: smesher_id

@@ -1,0 +1,28 @@
+{
+  "provider": "spacemesh",
+  "sources": [
+    "spacemesh-accountservice-api-openapi.yml",
+    "spacemesh-activationservice-api-openapi.yml",
+    "spacemesh-layerservice-api-openapi.yml",
+    "spacemesh-malfeasanceservice-api-openapi.yml",
+    "spacemesh-networkservice-api-openapi.yml",
+    "spacemesh-nodeservice-api-openapi.yml",
+    "spacemesh-rewardservice-api-openapi.yml",
+    "spacemesh-transactionservice-api-openapi.yml"
+  ],
+  "outputs": [
+    "spacemesh-accountservice-api-openapi.yml",
+    "spacemesh-activationservice-api-openapi.yml",
+    "spacemesh-layerservice-api-openapi.yml",
+    "spacemesh-malfeasanceservice-api-openapi.yml",
+    "spacemesh-networkservice-api-openapi.yml",
+    "spacemesh-nodeservice-api-openapi.yml",
+    "spacemesh-rewardservice-api-openapi.yml",
+    "spacemesh-transactionservice-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

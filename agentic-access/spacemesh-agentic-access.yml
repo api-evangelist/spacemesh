@@ -1,0 +1,372 @@
+generated: '2026-07-21'
+method: generated
+source: openapi/spacemesh-v1-openapi-original.json, openapi/spacemesh-v2beta1-openapi-original.json
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 26
+  by_action_class:
+    acting: 16
+    connected: 10
+  by_consequence:
+    write: 16
+    read: 10
+  human_in_the_loop_required: 0
+operations:
+- path: /spacemesh.v2alpha1.AccountService/List
+  method: post
+  operationId: AccountService_List
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.ActivationService/ActivationsCount
+  method: post
+  operationId: ActivationService_ActivationsCount
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.ActivationService/Highest
+  method: post
+  operationId: ActivationService_Highest
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.ActivationService/List
+  method: post
+  operationId: ActivationService_List
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.LayerService/List
+  method: post
+  operationId: LayerService_List
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.MalfeasanceService/List
+  method: post
+  operationId: MalfeasanceService_List
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.NetworkService/Info
+  method: post
+  operationId: NetworkService_Info
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.NodeService/Status
+  method: post
+  operationId: NodeService_Status
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.RewardService/List
+  method: post
+  operationId: RewardService_List
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.TransactionService/EstimateGas
+  method: post
+  operationId: TransactionService_EstimateGas
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.TransactionService/List
+  method: post
+  operationId: TransactionService_List
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.TransactionService/ParseTransaction
+  method: post
+  operationId: TransactionService_ParseTransaction
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2alpha1.TransactionService/SubmitTransaction
+  method: post
+  operationId: TransactionService_SubmitTransaction
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2beta1.AccountService/List
+  method: get
+  operationId: AccountService_List
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.ActivationService/ActivationsCount
+  method: get
+  operationId: ActivationService_ActivationsCount
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.ActivationService/Highest
+  method: get
+  operationId: ActivationService_Highest
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.ActivationService/List
+  method: get
+  operationId: ActivationService_List
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.LayerService/List
+  method: get
+  operationId: LayerService_List
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.MalfeasanceService/List
+  method: get
+  operationId: MalfeasanceService_List
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.NetworkService/Info
+  method: get
+  operationId: NetworkService_Info
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.NodeService/Status
+  method: get
+  operationId: NodeService_Status
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.RewardService/List
+  method: get
+  operationId: RewardService_List
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.TransactionService/EstimateGas
+  method: post
+  operationId: TransactionService_EstimateGas
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2beta1.TransactionService/List
+  method: get
+  operationId: TransactionService_List
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /spacemesh.v2beta1.TransactionService/ParseTransaction
+  method: post
+  operationId: TransactionService_ParseTransaction
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /spacemesh.v2beta1.TransactionService/SubmitTransaction
+  method: post
+  operationId: TransactionService_SubmitTransaction
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required

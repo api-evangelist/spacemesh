@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+import "spacemesh/v1/global_state_types.proto";
+import "google/api/visibility.proto";
+
+package spacemesh.v1;
+
+// Readonly global state data - current and historical.
+// Global state data is data which is not explicitly stored in the mesh.
+// Global state is modified only by the state transition function.
+service GlobalStateService {
+    option (google.api.api_visibility).restriction = "V1";
+
+    // Latest computed global state - layer and its root hash
+    rpc GlobalStateHash(GlobalStateHashRequest) returns (GlobalStateHashResponse) {
+        option (google.api.http) = {
+            post: "/v1/globalstate/globalstatehash"
+            body: "*"
+        };
+    }
+
+    // Account info in the current global state.
+    rpc Account(AccountRequest) returns (AccountResponse) {
+        option (google.api.http) = {
+            post: "/v1/globalstate/account"
+            body: "*"
+        };
+    }
+
+    // Query for account related data such as rewards, tx receipts and account info
+    //
+    // Note: it might be too expensive to add a param for layer to get these results from
+    // as it may require indexing all global state changes per account by layer.
+    // If it is possible to index by layer then we should add param start_layer to
+    // AccountDataParams. Currently it will return data from genesis.
+    rpc AccountDataQuery(AccountDataQueryRequest) returns (AccountDataQueryResponse) {
+        option (google.api.http) = {
+            post: "/v1/globalstate/accountdataquery"
+            body: "*"
+        };
+    }
+
+    ////////// Streams
+
+    // Get a stream of account related changes such as account balance change,
+    // tx receipts and rewards
+    rpc AccountDataStream(AccountDataStreamRequest) returns (stream AccountDataStreamResponse);
+
+    // New global state computed for a layer by the STF
+    rpc GlobalStateStream(GlobalStateStreamRequest) returns (stream GlobalStateStreamResponse);
+}

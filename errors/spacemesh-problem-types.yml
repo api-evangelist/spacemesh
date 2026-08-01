@@ -1,0 +1,50 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/spacemesh-v1-openapi-original.json, openapi/spacemesh-v2beta1-openapi-original.json
+format: grpc-status
+notes: >-
+  The Spacemesh API is gRPC-first with a gRPC-gateway REST facade. Every
+  operation returns 200 on success and a `default` error carrying a
+  google.rpc.Status object (numeric gRPC code + message + details[]). It does
+  NOT use RFC 9457 problem+json. The problems below are the canonical gRPC
+  status codes the gateway maps HTTP responses to.
+envelope:
+  schema: google.rpc.Status
+  fields: [code, message, details]
+problems:
+  - grpc_code: 3
+    grpc: INVALID_ARGUMENT
+    http: 400
+    title: Invalid argument
+    remediation: Validate request fields (addresses, filters, paging) before retrying
+  - grpc_code: 5
+    grpc: NOT_FOUND
+    http: 404
+    title: Resource not found
+    remediation: The requested account/transaction/layer does not exist or is not yet synced
+  - grpc_code: 7
+    grpc: PERMISSION_DENIED
+    http: 403
+    title: Permission denied
+  - grpc_code: 8
+    grpc: RESOURCE_EXHAUSTED
+    http: 429
+    title: Resource exhausted / rate limited
+  - grpc_code: 9
+    grpc: FAILED_PRECONDITION
+    http: 400
+    title: Failed precondition
+    remediation: Node may not be synced; check NodeService.Status before querying
+  - grpc_code: 13
+    grpc: INTERNAL
+    http: 500
+    title: Internal error
+  - grpc_code: 14
+    grpc: UNAVAILABLE
+    http: 503
+    title: Service unavailable
+    remediation: Node offline, service disabled, or gRPC endpoint not enabled in node config
+  - grpc_code: 16
+    grpc: UNAUTHENTICATED
+    http: 401
+    title: Unauthenticated

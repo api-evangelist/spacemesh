@@ -1,0 +1,17 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Spacemesh API (v2beta1)
+  version: 1.0.0
+extends: openapi/spacemesh-v2beta1-openapi-original.json
+actions:
+  - target: $.info
+    update:
+      x-apievangelist-enrichment: local-v1
+      x-api-style: gRPC + grpc-gateway REST facade
+      x-auth: none (public node gateway)
+      x-error-envelope: google.rpc.Status
+      x-pagination: offset + limit
+      x-project-status: dormant (web/API domains parked; last node release 2025-04-15)
+  - target: $
+    update:
+      x-canonical-source: https://github.com/spacemeshos/api

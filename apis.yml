@@ -1,27 +1,226 @@
 aid: spacemesh
 name: Spacemesh
-description: 'Spacemesh is a company surfaced as a portfolio company of paradigm and added to the API
-  Evangelist network as a stub for enrichment. Sector: crypto-infrastructure. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Spacemesh is a permissionless, self-mining proof-of-space-time (PoST) layer-1
+  blockchain built to run on ordinary home computers using unused disk space
+  rather than specialized hardware or large capital stake. Its full-node
+  software (go-spacemesh) exposes a gRPC API with a grpc-gateway REST/JSON
+  facade for reading chain state — accounts, transactions, layers, rewards and
+  activations (ATXs) — and for submitting transactions. Surfaced as a Paradigm
+  portfolio company; the protocol, node, API design and developer tooling remain
+  open source under the spacemeshos GitHub org, though the company's
+  spacemesh.io / spacemesh.network web and hosted-API domains are now parked and
+  the last node release was April 2025 (project appears dormant).
 url: https://raw.githubusercontent.com/api-evangelist/spacemesh/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/spacemeshos.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - paradigm
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: gRPC + grpc-gateway node API captured from official GitHub org
+x-project-status: dormant (web/API domains parked; last node release 2025-04-15)
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Crypto Infrastructure
-apis: []
+- Blockchain
+- Cryptocurrency
+- Proof of Space-Time
+- Layer 1
+- gRPC
+- Node API
+- Open Source
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: spacemesh:spacemesh-accountservice-api
+  name: Spacemesh AccountService API
+  description: The AccountService API from Spacemesh — 2 operation(s) for accountservice.
+  humanURL: https://github.com/spacemeshos/api
+  baseURL: https://api.spacemesh.network
+  tags:
+  - AccountService
+  properties:
+  - type: OpenAPI
+    url: openapi/spacemesh-accountservice-api-openapi.yml
+  - type: Protobuf
+    url: grpc/spacemesh/v2beta1/v2beta1.proto
+  - type: Documentation
+    url: https://github.com/spacemeshos/api
+  - type: Protobuf
+    url: grpc/spacemesh/v1/node.proto
+- aid: spacemesh:spacemesh-activationservice-api
+  name: Spacemesh ActivationService API
+  description: The ActivationService API from Spacemesh — 6 operation(s) for activationservice.
+  humanURL: https://github.com/spacemeshos/api
+  baseURL: https://api.spacemesh.network
+  tags:
+  - ActivationService
+  properties:
+  - type: OpenAPI
+    url: openapi/spacemesh-activationservice-api-openapi.yml
+  - type: Protobuf
+    url: grpc/spacemesh/v2beta1/v2beta1.proto
+  - type: Documentation
+    url: https://github.com/spacemeshos/api
+  - type: Protobuf
+    url: grpc/spacemesh/v1/node.proto
+- aid: spacemesh:spacemesh-layerservice-api
+  name: Spacemesh LayerService API
+  description: The LayerService API from Spacemesh — 2 operation(s) for layerservice.
+  humanURL: https://github.com/spacemeshos/api
+  baseURL: https://api.spacemesh.network
+  tags:
+  - LayerService
+  properties:
+  - type: OpenAPI
+    url: openapi/spacemesh-layerservice-api-openapi.yml
+  - type: Protobuf
+    url: grpc/spacemesh/v2beta1/v2beta1.proto
+  - type: Documentation
+    url: https://github.com/spacemeshos/api
+  - type: Protobuf
+    url: grpc/spacemesh/v1/node.proto
+- aid: spacemesh:spacemesh-malfeasanceservice-api
+  name: Spacemesh MalfeasanceService API
+  description: The MalfeasanceService API from Spacemesh — 2 operation(s) for malfeasanceservice.
+  humanURL: https://github.com/spacemeshos/api
+  baseURL: https://api.spacemesh.network
+  tags:
+  - MalfeasanceService
+  properties:
+  - type: OpenAPI
+    url: openapi/spacemesh-malfeasanceservice-api-openapi.yml
+  - type: Protobuf
+    url: grpc/spacemesh/v2beta1/v2beta1.proto
+  - type: Documentation
+    url: https://github.com/spacemeshos/api
+  - type: Protobuf
+    url: grpc/spacemesh/v1/node.proto
+- aid: spacemesh:spacemesh-networkservice-api
+  name: Spacemesh NetworkService API
+  description: The NetworkService API from Spacemesh — 2 operation(s) for networkservice.
+  humanURL: https://github.com/spacemeshos/api
+  baseURL: https://api.spacemesh.network
+  tags:
+  - NetworkService
+  properties:
+  - type: OpenAPI
+    url: openapi/spacemesh-networkservice-api-openapi.yml
+  - type: Protobuf
+    url: grpc/spacemesh/v2beta1/v2beta1.proto
+  - type: Documentation
+    url: https://github.com/spacemeshos/api
+  - type: Protobuf
+    url: grpc/spacemesh/v1/node.proto
+- aid: spacemesh:spacemesh-nodeservice-api
+  name: Spacemesh NodeService API
+  description: The NodeService API from Spacemesh — 2 operation(s) for nodeservice.
+  humanURL: https://github.com/spacemeshos/api
+  baseURL: https://api.spacemesh.network
+  tags:
+  - NodeService
+  properties:
+  - type: OpenAPI
+    url: openapi/spacemesh-nodeservice-api-openapi.yml
+  - type: Protobuf
+    url: grpc/spacemesh/v2beta1/v2beta1.proto
+  - type: Documentation
+    url: https://github.com/spacemeshos/api
+  - type: Protobuf
+    url: grpc/spacemesh/v1/node.proto
+- aid: spacemesh:spacemesh-rewardservice-api
+  name: Spacemesh RewardService API
+  description: The RewardService API from Spacemesh — 2 operation(s) for rewardservice.
+  humanURL: https://github.com/spacemeshos/api
+  baseURL: https://api.spacemesh.network
+  tags:
+  - RewardService
+  properties:
+  - type: OpenAPI
+    url: openapi/spacemesh-rewardservice-api-openapi.yml
+  - type: Protobuf
+    url: grpc/spacemesh/v2beta1/v2beta1.proto
+  - type: Documentation
+    url: https://github.com/spacemeshos/api
+  - type: Protobuf
+    url: grpc/spacemesh/v1/node.proto
+- aid: spacemesh:spacemesh-transactionservice-api
+  name: Spacemesh TransactionService API
+  description: The TransactionService API from Spacemesh — 8 operation(s) for transactionservice.
+  humanURL: https://github.com/spacemeshos/api
+  baseURL: https://api.spacemesh.network
+  tags:
+  - TransactionService
+  properties:
+  - type: OpenAPI
+    url: openapi/spacemesh-transactionservice-api-openapi.yml
+  - type: Protobuf
+    url: grpc/spacemesh/v2beta1/v2beta1.proto
+  - type: Documentation
+    url: https://github.com/spacemeshos/api
+  - type: Protobuf
+    url: grpc/spacemesh/v1/node.proto
 common:
 - type: Website
   url: https://spacemesh.io
+- type: GitHubOrganization
+  url: https://github.com/spacemeshos
+- type: SourceCode
+  url: https://github.com/spacemeshos/go-spacemesh
+- type: Documentation
+  url: https://github.com/spacemeshos/api
+- type: APIReference
+  url: https://github.com/spacemeshos/api
+- type: Protobuf
+  url: grpc/spacemesh/v2beta1/v2beta1.proto
+- type: Packages
+  url: packages/spacemesh-packages.yml
+- type: SDKs
+  url: packages/spacemesh-packages.yml
+- type: CLI
+  url: cli/spacemesh-cli.yml
+- type: MCPServer
+  url: mcp/spacemesh-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/spacemesh-llms.txt
+- type: Conventions
+  url: conventions/spacemesh-conventions.yml
+- type: ErrorCatalog
+  url: errors/spacemesh-problem-types.yml
+- type: Conformance
+  url: conformance/spacemesh-conformance.yml
+- type: Lifecycle
+  url: lifecycle/spacemesh-lifecycle.yml
+- type: ChangeLog
+  url: changelog/spacemesh-changelog.yml
+- type: DataModel
+  url: data-model/spacemesh-data-model.yml
+- type: AgenticAccess
+  url: agentic-access/spacemesh-agentic-access.yml
+- type: DomainSecurity
+  url: security/spacemesh-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 20
+  pass: local-v1

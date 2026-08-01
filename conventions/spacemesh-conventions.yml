@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: derived
+source: openapi/spacemesh-v2beta1-openapi-original.json, grpc/spacemesh/v2alpha1/
+notes: >-
+  Cross-cutting request/response semantics for the Spacemesh node API
+  (gRPC + gRPC-gateway REST). Derived from the proto/swagger contract.
+transport:
+  primary: gRPC
+  rest_facade: grpc-gateway (Swagger 2.0), JSON over HTTPS
+  content_type: application/json
+authentication:
+  style: none
+  note: >-
+    The node gRPC/gateway API declares no security schemes. It is a read-mostly
+    node interface; access control is by network reachability / node operator
+    configuration (services are individually enabled/disabled in node config),
+    not by API keys or OAuth.
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key mechanism. Reads are naturally idempotent; transaction
+    submission is deduplicated at the protocol level by the account nonce/counter
+    (a resubmitted transaction with the same counter is rejected as conflicting),
+    not by an HTTP idempotency key.
+pagination:
+  style: offset-limit
+  params: [offset, limit]
+  extra_filters: [min/start_layer, max/end_layer, sort_order]
+  note: List/query requests carry uint64 offset + limit plus service-specific filters
+versioning:
+  style: package-path
+  detail: version encoded in the gRPC service package (spacemesh.v1 / v2alpha1 / v2beta1)
+error_envelope:
+  shape: google.rpc.Status
+  fields: [code, message, details]
+  cross_ref: errors/spacemesh-problem-types.yml
+rate_limit_signaling:
+  documented: false
+cross_reference:
+  errors: errors/spacemesh-problem-types.yml
+  lifecycle: lifecycle/spacemesh-lifecycle.yml
+  data_model: data-model/spacemesh-data-model.yml

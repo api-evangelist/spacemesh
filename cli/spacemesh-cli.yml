@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/spacemeshos/smcli
+name: smcli
+description: >-
+  Spacemesh command-line tool for managing wallet files and verifying genesis
+  ledger information. Wallet format is compatible with the Smapp wallet.
+install:
+  - method: github-release
+    detail: download the smcli binary from https://github.com/spacemeshos/smcli/releases
+help: smcli -h
+command_groups:
+  - group: wallet
+    commands:
+      - name: wallet create
+        description: Generate a new encrypted wallet file with a random mnemonic and keypair(s)
+        flags: ["--ledger (create using a hardware wallet)"]
+      - name: wallet read
+        description: Read/decrypt an encrypted wallet file and print its accounts
+        flags: ["--full (show full details)"]
+  - group: genesis
+    commands:
+      - name: genesis verify
+        description: Verify information contained in the genesis ledger (public keys + multisig params)
+related_binaries:
+  - go-spacemesh (full node, packages/spacemesh-packages.yml)

@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/api/visibility.proto";
+
+package post.v1;
+
+message OperatorStatusRequest {}
+
+message OperatorStatusResponse {
+  enum Status {
+    UNUSED = 0;
+    IDLE = 1;
+    PROVING = 2;
+  }
+  Status status = 1;
+}
+
+service OperatorService {
+  option (google.api.api_visibility).restriction = "V1";
+
+  rpc Status(OperatorStatusRequest) returns (OperatorStatusResponse);
+}

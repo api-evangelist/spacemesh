@@ -1,0 +1,54 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: openapi/spacemesh-v2beta1-openapi-original.json
+notes: >-
+  No official Spacemesh MCP server was found. This is a DERIVED candidate tool
+  list, one tool per read/query operation in the v2beta1 gRPC-gateway API, so an
+  agent could read chain state (accounts, transactions, layers, rewards,
+  activations) and submit/estimate transactions against a running go-spacemesh
+  node. Bind the server URL to your own node's gRPC-gateway host.
+server:
+  name: spacemesh
+  transport: http
+  url: null
+tools:
+  - name: get_network_info
+    description: Return network id, genesis time, layer duration and other network parameters
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#NetworkService_Info
+  - name: get_node_status
+    description: Return node sync status, top/verified/synced layers and peer count
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#NodeService_Status
+  - name: list_accounts
+    description: List account state (balance, nonce/counter) by address
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#AccountService_List
+  - name: list_transactions
+    description: List/query transactions with paging and filters
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#TransactionService_List
+  - name: submit_transaction
+    description: Submit a signed transaction blob to the node mempool
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#TransactionService_SubmitTransaction
+  - name: estimate_gas
+    description: Estimate gas for a transaction
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#TransactionService_EstimateGas
+  - name: parse_transaction
+    description: Parse a transaction blob into its structured contents
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#TransactionService_ParseTransaction
+  - name: list_layers
+    description: List layers with status (applied/verified) and block
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#LayerService_List
+  - name: list_rewards
+    description: List smeshing rewards by layer/coinbase/smesher
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#RewardService_List
+  - name: list_activations
+    description: List activation transactions (ATXs)
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#ActivationService_List
+  - name: get_highest_activation
+    description: Return the highest known activation
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#ActivationService_Highest
+  - name: count_activations
+    description: Count activations matching a filter
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#ActivationService_ActivationsCount
+  - name: list_malfeasance
+    description: List malfeasance proofs (misbehaving identities)
+    source_operation: openapi/spacemesh-v2beta1-openapi-original.json#MalfeasanceService_List

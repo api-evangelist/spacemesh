@@ -1,0 +1,54 @@
+syntax = "proto3";
+
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+import "spacemesh/v1/node_types.proto";
+import "google/api/visibility.proto";
+
+package spacemesh.v1;
+
+// Readonly basic node data
+service NodeService {
+    option (google.api.api_visibility).restriction = "V1";
+
+    // A simple test endpoint
+    rpc Echo(EchoRequest) returns (EchoResponse) {
+        option (google.api.http) = {
+            post: "/v1/node/echo"
+            body: "*"
+        };
+    }
+
+    // Returns the version of the node software as a semver string
+    rpc Version(google.protobuf.Empty) returns (VersionResponse) {
+        option (google.api.http) = {
+            post: "/v1/node/version"
+        };
+    }
+
+    // Returns the github commit hash used to build the node
+    rpc Build(google.protobuf.Empty) returns (BuildResponse) {
+        option (google.api.http) = {
+            post: "/v1/node/build"
+        };
+    }
+
+    // Current node status (net and sync)
+    rpc Status(StatusRequest) returns (StatusResponse) {
+        option (google.api.http) = {
+            post: "/v1/node/status"
+            body: "*"
+        };
+    }
+
+    // NodeInfo is a node configuration info.
+    rpc NodeInfo(google.protobuf.Empty) returns (NodeInfoResponse);
+
+    ////////// Node streaming data
+
+    // Node status events (sync and net)
+    rpc StatusStream(StatusStreamRequest) returns (stream StatusStreamResponse);
+
+    // Node error events
+    rpc ErrorStream(ErrorStreamRequest) returns (stream ErrorStreamResponse);
+}

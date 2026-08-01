@@ -1,0 +1,12 @@
+generated: '2026-07-21'
+method: generated
+source: openapi/spacemesh-v2beta1-openapi-original.json
+skills:
+  - file: spacemesh-read-chain-state.md
+    name: Read Spacemesh chain state
+    api: openapi/spacemesh-v2beta1-openapi-original.json
+    operations: [NetworkService_Info, NodeService_Status, AccountService_List, TransactionService_List, RewardService_List, LayerService_List]
+  - file: spacemesh-submit-transaction.md
+    name: Submit a Spacemesh transaction
+    api: openapi/spacemesh-v2beta1-openapi-original.json
+    operations: [NodeService_Status, TransactionService_ParseTransaction, TransactionService_EstimateGas, TransactionService_SubmitTransaction, AccountService_List]

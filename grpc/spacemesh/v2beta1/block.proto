@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package spacemesh.v2beta1;
+
+message Block {
+  bytes id = 1; // block hash
+}

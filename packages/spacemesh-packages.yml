@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/spacemeshos
+notes: >-
+  First-party client libraries and node/CLI binaries for the Spacemesh
+  protocol. The full node (go-spacemesh) is the primary implementation; smcli
+  is the wallet/genesis CLI; the @spacemesh npm packages support wallet/tx
+  construction in JS/TS. The company web domains are parked, but the code and
+  release artifacts remain published under the spacemeshos GitHub org.
+packages:
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/spacemeshos/go-spacemesh
+    url: https://pkg.go.dev/github.com/spacemeshos/go-spacemesh
+    install: go get github.com/spacemeshos/go-spacemesh
+    official: true
+    role: Full node implementation of the Spacemesh protocol (exposes the gRPC/gRPC-gateway API)
+  - language: go
+    registry: github-releases
+    name: smcli
+    url: https://github.com/spacemeshos/smcli
+    install: download release binary from https://github.com/spacemeshos/smcli/releases
+    official: true
+    role: Command-line wallet & genesis verification tool
+  - language: javascript
+    registry: npm
+    name: "@spacemesh/sm-codec"
+    url: https://www.npmjs.com/package/@spacemesh/sm-codec
+    install: npm install @spacemesh/sm-codec
+    official: true
+    role: Spacemesh transaction codec (encode/decode transactions)
+  - language: javascript
+    registry: npm
+    name: "@spacemesh/ed25519-bip32"
+    url: https://www.npmjs.com/package/@spacemesh/ed25519-bip32
+    install: npm install @spacemesh/ed25519-bip32
+    official: true
+    role: WASM wrapper for ED25519-DALEK-BIP32 HD key derivation
+  - language: rust
+    registry: github
+    name: spacemesh-sdk
+    url: https://github.com/spacemeshos/spacemesh-sdk
+    install: cargo add --git https://github.com/spacemeshos/spacemesh-sdk
+    official: true
+    role: Low-level Rust SDK (not published to crates.io; source only)
