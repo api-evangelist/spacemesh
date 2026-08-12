@@ -179,6 +179,11 @@ apis:
   - type: Protobuf
     url: grpc/spacemesh/v1/node.proto
 common:
+- type: Overlay
+  url: overlays/spacemesh-v1-overlay.yaml
+- type: License
+  name: MIT
+  url: https://github.com/spacemeshos/go-spacemesh/blob/develop/LICENSE
 - type: Website
   url: https://spacemesh.io
 - type: GitHubOrganization
