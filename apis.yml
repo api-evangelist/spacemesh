@@ -31,7 +31,7 @@ x-backed-by:
 x-tier: enriched
 x-tier-reason: gRPC + grpc-gateway node API captured from official GitHub org
 x-project-status: dormant (web/API domains parked; last node release 2025-04-15)
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-21'
 tags:
