@@ -1,0 +1,162 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Spacemesh AccountService TransactionService API",
+    "version": "v2alpha1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TransactionService",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Estimate gas for transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.TransactionService/EstimateGas"
+          },
+          "docs": "EstimateGas is a method that takes a \"EstimateGasRequest\" body and returns an \"EstimateGasResponse\".\nThis method is used to estimate the recommended maximum gas for a signed binary transaction."
+        },
+        {
+          "info": {
+            "name": "List of transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.TransactionService/List"
+          },
+          "docs": "List is a method that takes a \"TransactionRequest\" body and returns an \"TransactionList\".\nThis method is used to retrieve a list of transactions based on the provided request parameters."
+        },
+        {
+          "info": {
+            "name": "Parse transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.TransactionService/ParseTransaction"
+          },
+          "docs": "ParseTransaction is a method that takes a \"ParseTransactionRequest\" body and returns an \"ParseTransactionResponse\".\nThis method is used to parse a signed binary transaction and optionally verify its signature."
+        },
+        {
+          "info": {
+            "name": "Submit transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.TransactionService/SubmitTransaction"
+          },
+          "docs": "SubmitTransaction is a method that takes a \"SubmitTransactionRequest\" body and returns an \"SubmitTransactionResponse\".\nThis method is used to submit a signed binary transaction to the network."
+        },
+        {
+          "info": {
+            "name": "Estimate gas for transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.TransactionService/EstimateGas"
+          },
+          "docs": "EstimateGas is a method that takes a \"EstimateGasRequest\" body and returns an \"EstimateGasResponse\".\nThis method is used to estimate the recommended maximum gas for a signed binary transaction."
+        },
+        {
+          "info": {
+            "name": "List of transactions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.TransactionService/List",
+            "params": [
+              {
+                "name": "startLayer",
+                "value": "",
+                "type": "query",
+                "description": "Starting layer for transactions."
+              },
+              {
+                "name": "endLayer",
+                "value": "",
+                "type": "query",
+                "description": "Ending layer for transactions."
+              },
+              {
+                "name": "txid",
+                "value": "",
+                "type": "query",
+                "description": "Filter: specific transaction IDs to filter."
+              },
+              {
+                "name": "address",
+                "value": "",
+                "type": "query",
+                "description": "Filter by address (principal or recipient)"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "Adjusts the starting point for data retrieval."
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "Specifies maximum number of items to fetch."
+              },
+              {
+                "name": "includeState",
+                "value": "",
+                "type": "query",
+                "description": "Whether to include transaction state in response."
+              },
+              {
+                "name": "includeResult",
+                "value": "",
+                "type": "query",
+                "description": "Whether to include result of transactions in response."
+              },
+              {
+                "name": "sortOrder",
+                "value": "",
+                "type": "query",
+                "description": "specifies the sort order by layer (default is ASC)"
+              }
+            ]
+          },
+          "docs": "List is a method that takes a \"TransactionRequest\" body and returns an \"TransactionList\".\nThis method is used to retrieve a list of transactions based on the provided request parameters."
+        },
+        {
+          "info": {
+            "name": "Parse transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.TransactionService/ParseTransaction"
+          },
+          "docs": "ParseTransaction is a method that takes a \"ParseTransactionRequest\" body and returns an \"ParseTransactionResponse\".\nThis method is used to parse a signed binary transaction and optionally verify its signature."
+        },
+        {
+          "info": {
+            "name": "Submit transaction",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.TransactionService/SubmitTransaction"
+          },
+          "docs": "SubmitTransaction is a method that takes a \"SubmitTransactionRequest\" body and returns an \"SubmitTransactionResponse\".\nThis method is used to submit a signed binary transaction to the network."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

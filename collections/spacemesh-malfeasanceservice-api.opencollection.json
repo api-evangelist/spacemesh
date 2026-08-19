@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Spacemesh AccountService MalfeasanceService API",
+    "version": "v2alpha1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "MalfeasanceService",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List of malfeasance proofs",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.MalfeasanceService/List"
+          },
+          "docs": "List is a method that takes a \"MalfeasanceRequest\" body and returns an \"MalfeasanceList\".\nThis method is used to retrieve a list of malfeasance proofs based on the provided request parameters."
+        },
+        {
+          "info": {
+            "name": "List of malfeasance proofs",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.MalfeasanceService/List",
+            "params": [
+              {
+                "name": "smesherId",
+                "value": "",
+                "type": "query",
+                "description": "list of smesher ids to fetch (can be empty for all)"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "adjusts the starting point for data"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "specifies max number of items to fetch"
+              }
+            ]
+          },
+          "docs": "List is a method that takes a \"MalfeasanceRequest\" body and returns an \"MalfeasanceList\".\nThis method is used to retrieve a list of malfeasance proofs based on the provided request parameters."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

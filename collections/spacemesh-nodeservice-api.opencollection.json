@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Spacemesh AccountService NodeService API",
+    "version": "v2alpha1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "NodeService",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Node status",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.NodeService/Status"
+          },
+          "docs": "Status is a method that returns an \"NodeStatusResponse\".\nThis method is used to retrieve node status information."
+        },
+        {
+          "info": {
+            "name": "Node status",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.NodeService/Status"
+          },
+          "docs": "Status is a method that returns an \"NodeStatusResponse\".\nThis method is used to retrieve node status information."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

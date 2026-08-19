@@ -1,0 +1,136 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Spacemesh AccountService ActivationService API",
+    "version": "v2alpha1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ActivationService",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Count of activations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.ActivationService/ActivationsCount"
+          },
+          "docs": "ActivationsCount is a method that takes an \"ActivationsCountRequest\" body and returns an \"ActivationsCountResponse\".\nThis method is used to retrieve the count of activations for a specified epoch."
+        },
+        {
+          "info": {
+            "name": "Highest",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.ActivationService/Highest"
+          },
+          "docs": "Highest is a method that takes an \"HighestRequest\" body and returns an \"HighestResponse\".\nThis method is used to retrieve the activation with the highest tick count."
+        },
+        {
+          "info": {
+            "name": "List of activations",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.ActivationService/List"
+          },
+          "docs": "List is a method that takes an \"ActivationRequest\" body and returns an \"ActivationList\".\nThis method is used to retrieve a list of activations based on the provided request parameters."
+        },
+        {
+          "info": {
+            "name": "Count of activations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.ActivationService/ActivationsCount",
+            "params": [
+              {
+                "name": "epoch",
+                "value": "",
+                "type": "query",
+                "description": "epoch number"
+              }
+            ]
+          },
+          "docs": "ActivationsCount is a method that takes an \"ActivationsCountRequest\" body and returns an \"ActivationsCountResponse\".\nThis method is used to retrieve the count of activations for a specified epoch."
+        },
+        {
+          "info": {
+            "name": "Highest",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.ActivationService/Highest"
+          },
+          "docs": "Highest is a method that takes an \"HighestRequest\" body and returns an \"HighestResponse\".\nThis method is used to retrieve the activation with the highest tick count."
+        },
+        {
+          "info": {
+            "name": "List of activations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.ActivationService/List",
+            "params": [
+              {
+                "name": "startEpoch",
+                "value": "",
+                "type": "query",
+                "description": "starting epoch for the query"
+              },
+              {
+                "name": "endEpoch",
+                "value": "",
+                "type": "query",
+                "description": "ending epoch for the query"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "query",
+                "description": "list of activation IDs"
+              },
+              {
+                "name": "smesherId",
+                "value": "",
+                "type": "query",
+                "description": "list of smesher IDs"
+              },
+              {
+                "name": "coinbase",
+                "value": "",
+                "type": "query",
+                "description": "`coinbase` filter is not supported by database index and will result in sequential scan."
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "adjusts the starting point for data"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "specifies max number of items to fetch"
+              }
+            ]
+          },
+          "docs": "List is a method that takes an \"ActivationRequest\" body and returns an \"ActivationList\".\nThis method is used to retrieve a list of activations based on the provided request parameters."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

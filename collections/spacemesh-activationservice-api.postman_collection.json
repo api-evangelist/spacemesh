@@ -1,0 +1,913 @@
+{
+  "item": [
+    {
+      "id": "3386595e-960d-4b40-bdc5-c8875ed3bb08",
+      "name": "ActivationService",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7ce443ea-18b2-4ff6-86bf-62dd96c4d16f",
+          "name": "Count of activations",
+          "request": {
+            "name": "Count of activations",
+            "description": {
+              "content": "ActivationsCount is a method that takes an \"ActivationsCountRequest\" body and returns an \"ActivationsCountResponse\".\nThis method is used to retrieve the count of activations for a specified epoch.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.ActivationService",
+                "ActivationsCount"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"epoch\": \"<long>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bd4fef52-0a58-4e14-aecb-d5b81fa5a09e",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.ActivationService",
+                    "ActivationsCount"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"epoch\": \"<long>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 7384\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b9e0f1cc-ac6e-4d2e-b6e0-661e887b586b",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.ActivationService",
+                    "ActivationsCount"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"epoch\": \"<long>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 229,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {}\n    },\n    {\n      \"@type\": \"string\"\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f7f8650e-d35d-409a-8c8f-9dbc41c7acf2",
+          "name": "Highest",
+          "request": {
+            "name": "Highest",
+            "description": {
+              "content": "Highest is a method that takes an \"HighestRequest\" body and returns an \"HighestResponse\".\nThis method is used to retrieve the activation with the highest tick count.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.ActivationService",
+                "Highest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "44ff3d64-e8b1-4fe4-affe-65609e2a23be",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.ActivationService",
+                    "Highest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"activation\": {\n    \"coinbase\": \"string\",\n    \"height\": \"string\",\n    \"id\": \"string\",\n    \"numUnits\": 7091,\n    \"publishEpoch\": 4124,\n    \"smesherId\": \"string\",\n    \"weight\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f29dff1c-b7f5-42c5-b8b3-56252d45d976",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.ActivationService",
+                    "Highest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5985,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "03b3c422-eed8-48bb-9b9a-ae0e8fa2a4ca",
+          "name": "List of activations",
+          "request": {
+            "name": "List of activations",
+            "description": {
+              "content": "List is a method that takes an \"ActivationRequest\" body and returns an \"ActivationList\".\nThis method is used to retrieve a list of activations based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.ActivationService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"coinbase\": \"<string>\",\n  \"endEpoch\": \"<long>\",\n  \"id\": [\n    \"<byte>\",\n    \"<byte>\"\n  ],\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"smesherId\": [\n    \"<byte>\",\n    \"<byte>\"\n  ],\n  \"startEpoch\": \"<long>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "71dd04ab-ebb2-4dbf-8351-30b7d961dda6",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.ActivationService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"coinbase\": \"<string>\",\n  \"endEpoch\": \"<long>\",\n  \"id\": [\n    \"<byte>\",\n    \"<byte>\"\n  ],\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"smesherId\": [\n    \"<byte>\",\n    \"<byte>\"\n  ],\n  \"startEpoch\": \"<long>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"activations\": [\n    {\n      \"coinbase\": \"string\",\n      \"height\": \"string\",\n      \"id\": \"string\",\n      \"numUnits\": 3463,\n      \"publishEpoch\": 272,\n      \"smesherId\": \"string\",\n      \"weight\": \"string\"\n    },\n    {\n      \"coinbase\": \"string\",\n      \"height\": \"string\",\n      \"id\": \"string\",\n      \"numUnits\": 3454,\n      \"publishEpoch\": 4927,\n      \"smesherId\": \"string\",\n      \"weight\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "66169618-03e7-4d8d-aefa-92c7a9435fc7",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.ActivationService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"coinbase\": \"<string>\",\n  \"endEpoch\": \"<long>\",\n  \"id\": [\n    \"<byte>\",\n    \"<byte>\"\n  ],\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"smesherId\": [\n    \"<byte>\",\n    \"<byte>\"\n  ],\n  \"startEpoch\": \"<long>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5985,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "68bff95a-2fe4-4ad7-a9f6-ec3be6e373ae",
+          "name": "Count of activations",
+          "request": {
+            "name": "Count of activations",
+            "description": {
+              "content": "ActivationsCount is a method that takes an \"ActivationsCountRequest\" body and returns an \"ActivationsCountResponse\".\nThis method is used to retrieve the count of activations for a specified epoch.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.ActivationService",
+                "ActivationsCount"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "epoch",
+                  "value": "<long>",
+                  "description": "epoch number"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "06ae4c5f-32f0-4862-b902-9172777c8a9f",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.ActivationService",
+                    "ActivationsCount"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "epoch",
+                      "value": "<long>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"count\": 7384\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bec39cfa-189e-49d7-a817-0e6d6a03baba",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.ActivationService",
+                    "ActivationsCount"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "epoch",
+                      "value": "<long>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5985,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "81c932e4-2b4a-4d1f-8b10-e65b3788f31b",
+          "name": "Highest",
+          "request": {
+            "name": "Highest",
+            "description": {
+              "content": "Highest is a method that takes an \"HighestRequest\" body and returns an \"HighestResponse\".\nThis method is used to retrieve the activation with the highest tick count.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.ActivationService",
+                "Highest"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fec8a4d5-169d-44f3-a1b8-b5166159f988",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.ActivationService",
+                    "Highest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"activation\": {\n    \"coinbase\": \"string\",\n    \"height\": \"string\",\n    \"id\": \"string\",\n    \"numUnits\": 7091,\n    \"publishEpoch\": 4124,\n    \"smesherId\": \"string\",\n    \"weight\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b84a6981-c5ea-442a-8f32-266112613598",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.ActivationService",
+                    "Highest"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5985,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b02fbea3-7a8d-424a-bc8c-3345ea1d7b57",
+          "name": "List of activations",
+          "request": {
+            "name": "List of activations",
+            "description": {
+              "content": "List is a method that takes an \"ActivationRequest\" body and returns an \"ActivationList\".\nThis method is used to retrieve a list of activations based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.ActivationService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startEpoch",
+                  "value": "<long>",
+                  "description": "starting epoch for the query"
+                },
+                {
+                  "disabled": false,
+                  "key": "endEpoch",
+                  "value": "<long>",
+                  "description": "ending epoch for the query"
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<byte>",
+                  "description": "list of activation IDs"
+                },
+                {
+                  "disabled": false,
+                  "key": "id",
+                  "value": "<byte>",
+                  "description": "list of activation IDs"
+                },
+                {
+                  "disabled": false,
+                  "key": "smesherId",
+                  "value": "<byte>",
+                  "description": "list of smesher IDs"
+                },
+                {
+                  "disabled": false,
+                  "key": "smesherId",
+                  "value": "<byte>",
+                  "description": "list of smesher IDs"
+                },
+                {
+                  "disabled": false,
+                  "key": "coinbase",
+                  "value": "<string>",
+                  "description": "`coinbase` filter is not supported by database index and will result in sequential scan."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<uint64>",
+                  "description": "adjusts the starting point for data"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<uint64>",
+                  "description": "specifies max number of items to fetch"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "771010b7-631e-4241-addb-f3f82ef4b634",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.ActivationService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startEpoch",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "endEpoch",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "smesherId",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "smesherId",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "coinbase",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"activations\": [\n    {\n      \"coinbase\": \"string\",\n      \"height\": \"string\",\n      \"id\": \"string\",\n      \"numUnits\": 3463,\n      \"publishEpoch\": 272,\n      \"smesherId\": \"string\",\n      \"weight\": \"string\"\n    },\n    {\n      \"coinbase\": \"string\",\n      \"height\": \"string\",\n      \"id\": \"string\",\n      \"numUnits\": 3454,\n      \"publishEpoch\": 4927,\n      \"smesherId\": \"string\",\n      \"weight\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8c3373e9-37b4-467f-8fc6-7cec4e2dc0ae",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.ActivationService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startEpoch",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "endEpoch",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "id",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "smesherId",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "smesherId",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "coinbase",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 5985,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://testnet-api.spacemesh.network",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9673c97f-3f7f-4269-9175-a5d2db2b3b87",
+    "name": "Spacemesh AccountService ActivationService API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Contact Support:\n Name: Spacemesh",
+      "type": "text/plain"
+    }
+  }
+}

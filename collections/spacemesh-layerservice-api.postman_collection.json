@@ -1,0 +1,350 @@
+{
+  "item": [
+    {
+      "id": "774a12ff-8f86-4df0-85d5-38d79d5e5851",
+      "name": "LayerService",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1bcda387-b45d-4ce8-8935-4b0abfaeb32e",
+          "name": "List of layers",
+          "request": {
+            "name": "List of layers",
+            "description": {
+              "content": "List is a method that takes a \"LayerRequest\" body and returns an \"LayerList\".\nThis method is used to retrieve a list of layers based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.LayerService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"endLayer\": \"<long>\",\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"sortOrder\": \"ASC\",\n  \"startLayer\": \"<long>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d3cd78e5-01ee-4bb6-bbb4-1989f580794a",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.LayerService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"endLayer\": \"<long>\",\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"sortOrder\": \"ASC\",\n  \"startLayer\": \"<long>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"layers\": [\n    {\n      \"block\": {\n        \"id\": \"string\"\n      },\n      \"consensusHash\": \"string\",\n      \"cumulativeStateHash\": \"string\",\n      \"number\": 7720,\n      \"stateHash\": \"string\",\n      \"status\": \"LAYER_STATUS_UNSPECIFIED\"\n    },\n    {\n      \"block\": {\n        \"id\": \"string\"\n      },\n      \"consensusHash\": \"string\",\n      \"cumulativeStateHash\": \"string\",\n      \"number\": 2334,\n      \"stateHash\": \"string\",\n      \"status\": \"LAYER_STATUS_UNSPECIFIED\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "08a5016f-a99a-4686-9ce3-3dd40eae8b1f",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.LayerService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"endLayer\": \"<long>\",\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"sortOrder\": \"ASC\",\n  \"startLayer\": \"<long>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 737,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {},\n      \"key_4\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "479f7e2d-e14f-498f-89c0-1d177619f37d",
+          "name": "List of layers",
+          "request": {
+            "name": "List of layers",
+            "description": {
+              "content": "List is a method that takes a \"LayerRequest\" body and returns an \"LayerList\".\nThis method is used to retrieve a list of layers based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.LayerService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startLayer",
+                  "value": "<long>",
+                  "description": "starting layer for the query"
+                },
+                {
+                  "disabled": false,
+                  "key": "endLayer",
+                  "value": "<long>",
+                  "description": "ending layer for the query"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<uint64>",
+                  "description": "adjusts the starting point for data"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<uint64>",
+                  "description": "specifies max number of items to fetch"
+                },
+                {
+                  "disabled": false,
+                  "key": "sortOrder",
+                  "value": "ASC",
+                  "description": "specifies the sort order (default is ASC)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a2bf537f-8e3e-4ddb-a969-a90547217ae9",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.LayerService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startLayer",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "endLayer",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "sortOrder",
+                      "value": "ASC"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"layers\": [\n    {\n      \"block\": {\n        \"id\": \"string\"\n      },\n      \"consensusHash\": \"string\",\n      \"cumulativeStateHash\": \"string\",\n      \"number\": 7720,\n      \"stateHash\": \"string\",\n      \"status\": \"LAYER_STATUS_UNSPECIFIED\"\n    },\n    {\n      \"block\": {\n        \"id\": \"string\"\n      },\n      \"consensusHash\": \"string\",\n      \"cumulativeStateHash\": \"string\",\n      \"number\": 2334,\n      \"stateHash\": \"string\",\n      \"status\": \"LAYER_STATUS_UNSPECIFIED\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2950a5f8-19c3-436e-b102-a4a63358e3f1",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.LayerService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startLayer",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "endLayer",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "sortOrder",
+                      "value": "ASC"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 4622,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://testnet-api.spacemesh.network",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "43365dc0-a623-4331-b8f6-316e874a259b",
+    "name": "Spacemesh AccountService LayerService API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Contact Support:\n Name: Spacemesh",
+      "type": "text/plain"
+    }
+  }
+}

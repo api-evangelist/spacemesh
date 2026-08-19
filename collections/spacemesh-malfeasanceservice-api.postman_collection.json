@@ -1,0 +1,336 @@
+{
+  "item": [
+    {
+      "id": "7d76db6b-ae78-4e01-abd2-cb76a16fd345",
+      "name": "MalfeasanceService",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "58982fa7-a6e1-4db0-a27b-ace794555eb2",
+          "name": "List of malfeasance proofs",
+          "request": {
+            "name": "List of malfeasance proofs",
+            "description": {
+              "content": "List is a method that takes a \"MalfeasanceRequest\" body and returns an \"MalfeasanceList\".\nThis method is used to retrieve a list of malfeasance proofs based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.MalfeasanceService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"smesherId\": [\n    \"<byte>\",\n    \"<byte>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "48a59b2d-2d44-48db-a0c8-75be68903311",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.MalfeasanceService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"smesherId\": [\n    \"<byte>\",\n    \"<byte>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"proofs\": [\n    {\n      \"domain\": \"DOMAIN_UNSPECIFIED\",\n      \"properties\": {\n        \"key_0\": \"string\"\n      },\n      \"smesher\": \"string\",\n      \"type\": 6714\n    },\n    {\n      \"domain\": \"DOMAIN_UNSPECIFIED\",\n      \"properties\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"smesher\": \"string\",\n      \"type\": 1670\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "028dbc1f-ddcd-4858-90de-af472eb5bcd3",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.MalfeasanceService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"smesherId\": [\n    \"<byte>\",\n    \"<byte>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 3427,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "18fdf588-475e-4282-b4aa-3f9f4379adca",
+          "name": "List of malfeasance proofs",
+          "request": {
+            "name": "List of malfeasance proofs",
+            "description": {
+              "content": "List is a method that takes a \"MalfeasanceRequest\" body and returns an \"MalfeasanceList\".\nThis method is used to retrieve a list of malfeasance proofs based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.MalfeasanceService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "smesherId",
+                  "value": "<byte>",
+                  "description": "list of smesher ids to fetch (can be empty for all)"
+                },
+                {
+                  "disabled": false,
+                  "key": "smesherId",
+                  "value": "<byte>",
+                  "description": "list of smesher ids to fetch (can be empty for all)"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<uint64>",
+                  "description": "adjusts the starting point for data"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<uint64>",
+                  "description": "specifies max number of items to fetch"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "29d0e94b-a480-4bd1-9de6-697961fb5041",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.MalfeasanceService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "smesherId",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "smesherId",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"proofs\": [\n    {\n      \"domain\": \"DOMAIN_UNSPECIFIED\",\n      \"properties\": {\n        \"key_0\": \"string\"\n      },\n      \"smesher\": \"string\",\n      \"type\": 6714\n    },\n    {\n      \"domain\": \"DOMAIN_UNSPECIFIED\",\n      \"properties\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      },\n      \"smesher\": \"string\",\n      \"type\": 1670\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e0f182a4-7ba4-407a-926e-950ca8f94931",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.MalfeasanceService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "smesherId",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "smesherId",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 7216,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://testnet-api.spacemesh.network",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "eda1cba5-532b-45b3-92d0-ae56ff512542",
+    "name": "Spacemesh AccountService MalfeasanceService API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Contact Support:\n Name: Spacemesh",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "item": [
+    {
+      "id": "966c4dac-f3b8-42df-a63c-e76b0e91099f",
+      "name": "NetworkService",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8e1c5ffb-920b-4491-89cb-e0ae190ff80b",
+          "name": "Network information",
+          "request": {
+            "name": "Network information",
+            "description": {
+              "content": "Info is a method that returns an \"NetworkInfoResponse\".\nThis method is used to retrieve network information.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.NetworkService",
+                "Info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "34fb4e28-0a8c-4292-b907-ef64dfc460b5",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.NetworkService",
+                    "Info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"effectiveGenesisLayer\": 9096,\n  \"genesisId\": \"string\",\n  \"genesisTime\": \"2013-06-28T08:22:16.929Z\",\n  \"hrp\": \"string\",\n  \"labelsPerUnit\": \"string\",\n  \"layerDuration\": \"string\",\n  \"layersPerEpoch\": 1521\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ff519641-5b2b-42c7-af6b-0ebc9e99c7ba",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.NetworkService",
+                    "Info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<object>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 8231,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fbbe38d5-6a88-400d-9721-de3c7a8a25c7",
+          "name": "Network information",
+          "request": {
+            "name": "Network information",
+            "description": {
+              "content": "Info is a method that returns an \"NetworkInfoResponse\".\nThis method is used to retrieve network information.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.NetworkService",
+                "Info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "30889d84-e862-4c3e-a50f-262818211ea5",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.NetworkService",
+                    "Info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"effectiveGenesisLayer\": 9096,\n  \"genesisId\": \"string\",\n  \"genesisTime\": \"2013-06-28T08:22:16.929Z\",\n  \"hrp\": \"string\",\n  \"labelsPerUnit\": \"string\",\n  \"layerDuration\": \"string\",\n  \"layersPerEpoch\": 1521\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "be71ddcc-205c-4e9d-98d4-37c6f33bcc88",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.NetworkService",
+                    "Info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 7080,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {},\n      \"key_4\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://testnet-api.spacemesh.network",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "9916966c-4bdf-4521-804a-a4332b99a644",
+    "name": "Spacemesh AccountService NetworkService API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Contact Support:\n Name: Spacemesh",
+      "type": "text/plain"
+    }
+  }
+}

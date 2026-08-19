@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Spacemesh AccountService API",
+    "version": "v2alpha1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "AccountService",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List of accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.AccountService/List"
+          },
+          "docs": "List is a method that takes an \"AccountRequest\" body and returns an \"AccountList\".\nThis method is used to retrieve a list of accounts based on the provided request parameters."
+        },
+        {
+          "info": {
+            "name": "List of accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.AccountService/List",
+            "params": [
+              {
+                "name": "addresses",
+                "value": "",
+                "type": "query",
+                "description": "list of account addresses"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "adjusts the starting point for data"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "specifies max number of items to fetch// bech32 format including HRP"
+              }
+            ]
+          },
+          "docs": "List is a method that takes an \"AccountRequest\" body and returns an \"AccountList\".\nThis method is used to retrieve a list of accounts based on the provided request parameters."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

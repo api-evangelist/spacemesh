@@ -1,0 +1,1242 @@
+{
+  "item": [
+    {
+      "id": "e7a4a6cb-76ab-4b19-a0e6-737dc1a4975e",
+      "name": "TransactionService",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b7697ddb-7bb5-49fe-9d5d-fbf06e0d455d",
+          "name": "Estimate gas for transaction",
+          "request": {
+            "name": "Estimate gas for transaction",
+            "description": {
+              "content": "EstimateGas is a method that takes a \"EstimateGasRequest\" body and returns an \"EstimateGasResponse\".\nThis method is used to estimate the recommended maximum gas for a signed binary transaction.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.TransactionService",
+                "EstimateGas"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "579c9fb9-9510-494d-ad99-2d7bfe3d0b9a",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.TransactionService",
+                    "EstimateGas"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"recommendedMaxGas\": \"string\",\n  \"status\": {\n    \"code\": 6284,\n    \"details\": [\n      {\n        \"@type\": \"string\",\n        \"key_0\": {}\n      },\n      {\n        \"@type\": \"string\",\n        \"key_0\": {},\n        \"key_1\": {}\n      }\n    ],\n    \"message\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "aa7666c4-8d9d-413d-89ab-8e37a99816e6",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.TransactionService",
+                    "EstimateGas"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6886,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9828f548-32c7-4531-aedf-69ad222aa279",
+          "name": "List of transactions",
+          "request": {
+            "name": "List of transactions",
+            "description": {
+              "content": "List is a method that takes a \"TransactionRequest\" body and returns an \"TransactionList\".\nThis method is used to retrieve a list of transactions based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.TransactionService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"address\": \"<string>\",\n  \"endLayer\": \"<long>\",\n  \"includeResult\": \"<boolean>\",\n  \"includeState\": \"<boolean>\",\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"sortOrder\": \"ASC\",\n  \"startLayer\": \"<long>\",\n  \"txid\": [\n    \"<byte>\",\n    \"<byte>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1cf38646-4b50-496e-83ee-ce6db0db7cbe",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.TransactionService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"address\": \"<string>\",\n  \"endLayer\": \"<long>\",\n  \"includeResult\": \"<boolean>\",\n  \"includeState\": \"<boolean>\",\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"sortOrder\": \"ASC\",\n  \"startLayer\": \"<long>\",\n  \"txid\": [\n    \"<byte>\",\n    \"<byte>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"transactions\": [\n    {\n      \"tx\": {\n        \"contents\": {\n          \"drainVault\": {\n            \"amount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"destination\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vault\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiSigSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"send\": {\n            \"amount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"destination\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"singleSigSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"vaultSpawn\": {\n            \"initialUnlockAmount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"owner\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"totalAmount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vestingEnd\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vestingStart\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"vestingSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"gasPrice\": \"string\",\n        \"id\": \"string\",\n        \"maxGas\": \"string\",\n        \"maxSpend\": \"string\",\n        \"method\": 7897,\n        \"nonce\": {\n          \"counter\": \"string\"\n        },\n        \"principal\": \"string\",\n        \"raw\": \"string\",\n        \"template\": \"string\",\n        \"type\": \"TRANSACTION_TYPE_UNSPECIFIED\"\n      },\n      \"txResult\": {\n        \"block\": \"string\",\n        \"fee\": \"string\",\n        \"gasConsumed\": \"string\",\n        \"layer\": 3856,\n        \"message\": \"string\",\n        \"status\": \"TRANSACTION_STATUS_UNSPECIFIED\",\n        \"touchedAddresses\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"txState\": \"TRANSACTION_STATE_UNSPECIFIED\"\n    },\n    {\n      \"tx\": {\n        \"contents\": {\n          \"drainVault\": {\n            \"amount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"destination\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vault\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiSigSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"send\": {\n            \"amount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"destination\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"singleSigSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"vaultSpawn\": {\n            \"initialUnlockAmount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"owner\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"totalAmount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vestingEnd\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vestingStart\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"vestingSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"gasPrice\": \"string\",\n        \"id\": \"string\",\n        \"maxGas\": \"string\",\n        \"maxSpend\": \"string\",\n        \"method\": 1266,\n        \"nonce\": {\n          \"counter\": \"string\"\n        },\n        \"principal\": \"string\",\n        \"raw\": \"string\",\n        \"template\": \"string\",\n        \"type\": \"TRANSACTION_TYPE_UNSPECIFIED\"\n      },\n      \"txResult\": {\n        \"block\": \"string\",\n        \"fee\": \"string\",\n        \"gasConsumed\": \"string\",\n        \"layer\": 260,\n        \"message\": \"string\",\n        \"status\": \"TRANSACTION_STATUS_UNSPECIFIED\",\n        \"touchedAddresses\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"txState\": \"TRANSACTION_STATE_UNSPECIFIED\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "9d9d8ae1-3df2-4781-9c91-04271f13a1fa",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.TransactionService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"address\": \"<string>\",\n  \"endLayer\": \"<long>\",\n  \"includeResult\": \"<boolean>\",\n  \"includeState\": \"<boolean>\",\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\",\n  \"sortOrder\": \"ASC\",\n  \"startLayer\": \"<long>\",\n  \"txid\": [\n    \"<byte>\",\n    \"<byte>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6886,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d80ccc96-5cca-4591-be5d-1e89acae0fd3",
+          "name": "Parse transaction",
+          "request": {
+            "name": "Parse transaction",
+            "description": {
+              "content": "ParseTransaction is a method that takes a \"ParseTransactionRequest\" body and returns an \"ParseTransactionResponse\".\nThis method is used to parse a signed binary transaction and optionally verify its signature.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.TransactionService",
+                "ParseTransaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transaction\": \"<byte>\",\n  \"verify\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9e0988ec-f7f9-49d3-8af4-cc7ef29e980d",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.TransactionService",
+                    "ParseTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\",\n  \"verify\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": {\n    \"code\": 9213,\n    \"details\": [\n      {\n        \"@type\": \"string\",\n        \"key_0\": {},\n        \"key_1\": {},\n        \"key_2\": {}\n      },\n      {\n        \"@type\": \"string\",\n        \"key_0\": {},\n        \"key_1\": {}\n      }\n    ],\n    \"message\": \"string\"\n  },\n  \"tx\": {\n    \"contents\": {\n      \"drainVault\": {\n        \"amount\": \"string\",\n        \"destination\": \"string\",\n        \"vault\": \"string\"\n      },\n      \"multiSigSpawn\": {\n        \"pubkey\": [\n          \"string\",\n          \"string\"\n        ],\n        \"required\": 9810\n      },\n      \"send\": {\n        \"amount\": \"string\",\n        \"destination\": \"string\"\n      },\n      \"singleSigSpawn\": {\n        \"pubkey\": \"string\"\n      },\n      \"vaultSpawn\": {\n        \"initialUnlockAmount\": \"string\",\n        \"owner\": \"string\",\n        \"totalAmount\": \"string\",\n        \"vestingEnd\": 7290,\n        \"vestingStart\": 5381\n      },\n      \"vestingSpawn\": {\n        \"pubkey\": [\n          \"string\",\n          \"string\"\n        ],\n        \"required\": 9026\n      }\n    },\n    \"gasPrice\": \"string\",\n    \"id\": \"string\",\n    \"maxGas\": \"string\",\n    \"maxSpend\": \"string\",\n    \"method\": 6216,\n    \"nonce\": {\n      \"counter\": \"string\"\n    },\n    \"principal\": \"string\",\n    \"raw\": \"string\",\n    \"template\": \"string\",\n    \"type\": \"TRANSACTION_TYPE_UNSPECIFIED\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "29b7cd73-7825-40f4-9b99-fec5144abee8",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.TransactionService",
+                    "ParseTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\",\n  \"verify\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6886,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e32a6b48-1abe-4cca-b0d6-2af02001fab4",
+          "name": "Submit transaction",
+          "request": {
+            "name": "Submit transaction",
+            "description": {
+              "content": "SubmitTransaction is a method that takes a \"SubmitTransactionRequest\" body and returns an \"SubmitTransactionResponse\".\nThis method is used to submit a signed binary transaction to the network.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.TransactionService",
+                "SubmitTransaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0a664eab-ebe6-4230-b2bb-178a4e98a4db",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.TransactionService",
+                    "SubmitTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": {\n    \"code\": 2189,\n    \"details\": [\n      {\n        \"@type\": \"string\",\n        \"key_0\": {}\n      },\n      {\n        \"@type\": \"string\",\n        \"key_0\": {},\n        \"key_1\": {}\n      }\n    ],\n    \"message\": \"string\"\n  },\n  \"txId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b727a209-5b68-4d6d-adde-2ee697566dfc",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.TransactionService",
+                    "SubmitTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6886,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6200b6fd-5db6-4b9c-901b-627d340fc346",
+          "name": "Estimate gas for transaction",
+          "request": {
+            "name": "Estimate gas for transaction",
+            "description": {
+              "content": "EstimateGas is a method that takes a \"EstimateGasRequest\" body and returns an \"EstimateGasResponse\".\nThis method is used to estimate the recommended maximum gas for a signed binary transaction.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.TransactionService",
+                "EstimateGas"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a688718f-156c-49ab-81ec-1528c8663c19",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.TransactionService",
+                    "EstimateGas"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"recommendedMaxGas\": \"string\",\n  \"status\": {\n    \"code\": 806,\n    \"details\": [\n      {\n        \"@type\": \"string\",\n        \"key_0\": {},\n        \"key_1\": {},\n        \"key_2\": {}\n      },\n      {\n        \"@type\": \"string\"\n      }\n    ],\n    \"message\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d7058163-d5c9-4aa3-ba7a-4e93fdae9314",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.TransactionService",
+                    "EstimateGas"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6886,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ca8a88cb-d672-48a9-b9cc-0aa5f8bbd3bd",
+          "name": "List of transactions",
+          "request": {
+            "name": "List of transactions",
+            "description": {
+              "content": "List is a method that takes a \"TransactionRequest\" body and returns an \"TransactionList\".\nThis method is used to retrieve a list of transactions based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.TransactionService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startLayer",
+                  "value": "<long>",
+                  "description": "Starting layer for transactions."
+                },
+                {
+                  "disabled": false,
+                  "key": "endLayer",
+                  "value": "<long>",
+                  "description": "Ending layer for transactions."
+                },
+                {
+                  "disabled": false,
+                  "key": "txid",
+                  "value": "<byte>",
+                  "description": "Filter: specific transaction IDs to filter."
+                },
+                {
+                  "disabled": false,
+                  "key": "txid",
+                  "value": "<byte>",
+                  "description": "Filter: specific transaction IDs to filter."
+                },
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>",
+                  "description": "Filter by address (principal or recipient)"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<uint64>",
+                  "description": "Adjusts the starting point for data retrieval."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<uint64>",
+                  "description": "Specifies maximum number of items to fetch."
+                },
+                {
+                  "disabled": false,
+                  "key": "includeState",
+                  "value": "<boolean>",
+                  "description": "Whether to include transaction state in response."
+                },
+                {
+                  "disabled": false,
+                  "key": "includeResult",
+                  "value": "<boolean>",
+                  "description": "Whether to include result of transactions in response."
+                },
+                {
+                  "disabled": false,
+                  "key": "sortOrder",
+                  "value": "ASC",
+                  "description": "specifies the sort order by layer (default is ASC)"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3971bd51-7dde-492d-9845-b1ddbade2564",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.TransactionService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startLayer",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "endLayer",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "txid",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "txid",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "includeState",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeResult",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "sortOrder",
+                      "value": "ASC"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"transactions\": [\n    {\n      \"tx\": {\n        \"contents\": {\n          \"drainVault\": {\n            \"amount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"destination\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vault\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiSigSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"send\": {\n            \"amount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"destination\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"singleSigSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"vaultSpawn\": {\n            \"initialUnlockAmount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"owner\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"totalAmount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vestingEnd\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vestingStart\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"vestingSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"gasPrice\": \"string\",\n        \"id\": \"string\",\n        \"maxGas\": \"string\",\n        \"maxSpend\": \"string\",\n        \"method\": 7897,\n        \"nonce\": {\n          \"counter\": \"string\"\n        },\n        \"principal\": \"string\",\n        \"raw\": \"string\",\n        \"template\": \"string\",\n        \"type\": \"TRANSACTION_TYPE_UNSPECIFIED\"\n      },\n      \"txResult\": {\n        \"block\": \"string\",\n        \"fee\": \"string\",\n        \"gasConsumed\": \"string\",\n        \"layer\": 3856,\n        \"message\": \"string\",\n        \"status\": \"TRANSACTION_STATUS_UNSPECIFIED\",\n        \"touchedAddresses\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"txState\": \"TRANSACTION_STATE_UNSPECIFIED\"\n    },\n    {\n      \"tx\": {\n        \"contents\": {\n          \"drainVault\": {\n            \"amount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"destination\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vault\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"multiSigSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"send\": {\n            \"amount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"destination\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"singleSigSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"vaultSpawn\": {\n            \"initialUnlockAmount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"owner\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"totalAmount\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vestingEnd\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"vestingStart\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          },\n          \"vestingSpawn\": {\n            \"pubkey\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            },\n            \"required\": {\n              \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n            }\n          }\n        },\n        \"gasPrice\": \"string\",\n        \"id\": \"string\",\n        \"maxGas\": \"string\",\n        \"maxSpend\": \"string\",\n        \"method\": 1266,\n        \"nonce\": {\n          \"counter\": \"string\"\n        },\n        \"principal\": \"string\",\n        \"raw\": \"string\",\n        \"template\": \"string\",\n        \"type\": \"TRANSACTION_TYPE_UNSPECIFIED\"\n      },\n      \"txResult\": {\n        \"block\": \"string\",\n        \"fee\": \"string\",\n        \"gasConsumed\": \"string\",\n        \"layer\": 260,\n        \"message\": \"string\",\n        \"status\": \"TRANSACTION_STATUS_UNSPECIFIED\",\n        \"touchedAddresses\": [\n          \"string\",\n          \"string\"\n        ]\n      },\n      \"txState\": \"TRANSACTION_STATE_UNSPECIFIED\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "cddeddf6-2336-49e3-a6f1-4b04f4127e24",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.TransactionService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startLayer",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "endLayer",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "txid",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "txid",
+                      "value": "<byte>"
+                    },
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "includeState",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "includeResult",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "sortOrder",
+                      "value": "ASC"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6886,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e7f2c866-568f-481d-b4dd-f30db88703af",
+          "name": "Parse transaction",
+          "request": {
+            "name": "Parse transaction",
+            "description": {
+              "content": "ParseTransaction is a method that takes a \"ParseTransactionRequest\" body and returns an \"ParseTransactionResponse\".\nThis method is used to parse a signed binary transaction and optionally verify its signature.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.TransactionService",
+                "ParseTransaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transaction\": \"<byte>\",\n  \"verify\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "638b31f7-faab-4424-b896-e255a593000d",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.TransactionService",
+                    "ParseTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\",\n  \"verify\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": {\n    \"code\": 9213,\n    \"details\": [\n      {\n        \"@type\": \"string\",\n        \"key_0\": {},\n        \"key_1\": {},\n        \"key_2\": {}\n      },\n      {\n        \"@type\": \"string\",\n        \"key_0\": {},\n        \"key_1\": {}\n      }\n    ],\n    \"message\": \"string\"\n  },\n  \"tx\": {\n    \"contents\": {\n      \"drainVault\": {\n        \"amount\": \"string\",\n        \"destination\": \"string\",\n        \"vault\": \"string\"\n      },\n      \"multiSigSpawn\": {\n        \"pubkey\": [\n          \"string\",\n          \"string\"\n        ],\n        \"required\": 9810\n      },\n      \"send\": {\n        \"amount\": \"string\",\n        \"destination\": \"string\"\n      },\n      \"singleSigSpawn\": {\n        \"pubkey\": \"string\"\n      },\n      \"vaultSpawn\": {\n        \"initialUnlockAmount\": \"string\",\n        \"owner\": \"string\",\n        \"totalAmount\": \"string\",\n        \"vestingEnd\": 7290,\n        \"vestingStart\": 5381\n      },\n      \"vestingSpawn\": {\n        \"pubkey\": [\n          \"string\",\n          \"string\"\n        ],\n        \"required\": 9026\n      }\n    },\n    \"gasPrice\": \"string\",\n    \"id\": \"string\",\n    \"maxGas\": \"string\",\n    \"maxSpend\": \"string\",\n    \"method\": 6216,\n    \"nonce\": {\n      \"counter\": \"string\"\n    },\n    \"principal\": \"string\",\n    \"raw\": \"string\",\n    \"template\": \"string\",\n    \"type\": \"TRANSACTION_TYPE_UNSPECIFIED\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ccb5a9ff-b70c-4bdd-9219-ea19dd4a95d2",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.TransactionService",
+                    "ParseTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\",\n  \"verify\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6886,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a6606b2e-0753-4464-bf99-e1942da05ddb",
+          "name": "Submit transaction",
+          "request": {
+            "name": "Submit transaction",
+            "description": {
+              "content": "SubmitTransaction is a method that takes a \"SubmitTransactionRequest\" body and returns an \"SubmitTransactionResponse\".\nThis method is used to submit a signed binary transaction to the network.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.TransactionService",
+                "SubmitTransaction"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "503e6cc8-f664-4bbe-82da-3bb66c1242d8",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.TransactionService",
+                    "SubmitTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": {\n    \"code\": 2189,\n    \"details\": [\n      {\n        \"@type\": \"string\",\n        \"key_0\": {}\n      },\n      {\n        \"@type\": \"string\",\n        \"key_0\": {},\n        \"key_1\": {}\n      }\n    ],\n    \"message\": \"string\"\n  },\n  \"txId\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "154a66be-d248-4dc5-a0b9-5f6046420768",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.TransactionService",
+                    "SubmitTransaction"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"transaction\": \"<byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6886,\n  \"details\": [\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {},\n      \"key_2\": {},\n      \"key_3\": {}\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://testnet-api.spacemesh.network",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "c9562cfc-3d3f-4e55-a8d4-c805ad07ff69",
+    "name": "Spacemesh AccountService TransactionService API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Contact Support:\n Name: Spacemesh",
+      "type": "text/plain"
+    }
+  }
+}

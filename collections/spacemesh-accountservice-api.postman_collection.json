@@ -1,0 +1,336 @@
+{
+  "item": [
+    {
+      "id": "e001589b-b1af-4bb9-8a99-763237abdff4",
+      "name": "AccountService",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e728b1ac-9a0f-4472-8949-310800f9ef51",
+          "name": "List of accounts",
+          "request": {
+            "name": "List of accounts",
+            "description": {
+              "content": "List is a method that takes an \"AccountRequest\" body and returns an \"AccountList\".\nThis method is used to retrieve a list of accounts based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2alpha1.AccountService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"addresses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "971a02fc-343d-49de-a511-164d3c06afd2",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.AccountService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"addresses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"accounts\": [\n    {\n      \"address\": \"string\",\n      \"current\": {\n        \"balance\": \"string\",\n        \"counter\": \"string\",\n        \"layer\": 1074\n      },\n      \"projected\": {\n        \"balance\": \"string\",\n        \"counter\": \"string\",\n        \"layer\": 4554\n      },\n      \"template\": \"string\"\n    },\n    {\n      \"address\": \"string\",\n      \"current\": {\n        \"balance\": \"string\",\n        \"counter\": \"string\",\n        \"layer\": 5512\n      },\n      \"projected\": {\n        \"balance\": \"string\",\n        \"counter\": \"string\",\n        \"layer\": 6627\n      },\n      \"template\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "779b52c6-28d6-481b-b9cc-1423b7c52883",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2alpha1.AccountService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"addresses\": [\n    \"<string>\",\n    \"<string>\"\n  ],\n  \"limit\": \"<uint64>\",\n  \"offset\": \"<uint64>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 6645,\n  \"details\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "67bd5459-5854-4160-9103-e12dec3f2f79",
+          "name": "List of accounts",
+          "request": {
+            "name": "List of accounts",
+            "description": {
+              "content": "List is a method that takes an \"AccountRequest\" body and returns an \"AccountList\".\nThis method is used to retrieve a list of accounts based on the provided request parameters.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "spacemesh.v2beta1.AccountService",
+                "List"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "addresses",
+                  "value": "<string>",
+                  "description": "list of account addresses"
+                },
+                {
+                  "disabled": false,
+                  "key": "addresses",
+                  "value": "<string>",
+                  "description": "list of account addresses"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<uint64>",
+                  "description": "adjusts the starting point for data"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<uint64>",
+                  "description": "specifies max number of items to fetch// bech32 format including HRP"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c5d8fdc5-d15d-414d-a4d1-79d7d341e1b3",
+              "name": "A successful response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.AccountService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "addresses",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "addresses",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"accounts\": [\n    {\n      \"address\": \"string\",\n      \"current\": {\n        \"balance\": \"string\",\n        \"counter\": \"string\",\n        \"layer\": 1074\n      },\n      \"projected\": {\n        \"balance\": \"string\",\n        \"counter\": \"string\",\n        \"layer\": 4554\n      },\n      \"template\": \"string\"\n    },\n    {\n      \"address\": \"string\",\n      \"current\": {\n        \"balance\": \"string\",\n        \"counter\": \"string\",\n        \"layer\": 5512\n      },\n      \"projected\": {\n        \"balance\": \"string\",\n        \"counter\": \"string\",\n        \"layer\": 6627\n      },\n      \"template\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "050d5d15-0675-469a-922f-36fcdb7e2f47",
+              "name": "An unexpected error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "spacemesh.v2beta1.AccountService",
+                    "List"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "addresses",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "addresses",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<uint64>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<uint64>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 8756,\n  \"details\": [\n    {\n      \"@type\": \"string\"\n    },\n    {\n      \"@type\": \"string\",\n      \"key_0\": {},\n      \"key_1\": {}\n    }\n  ],\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://testnet-api.spacemesh.network",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "82e9ce1a-21b0-4e9c-b657-a2c9ab8f5fcd",
+    "name": "Spacemesh AccountService API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Contact Support:\n Name: Spacemesh",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Spacemesh AccountService LayerService API",
+    "version": "v2alpha1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "LayerService",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List of layers",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.LayerService/List"
+          },
+          "docs": "List is a method that takes a \"LayerRequest\" body and returns an \"LayerList\".\nThis method is used to retrieve a list of layers based on the provided request parameters."
+        },
+        {
+          "info": {
+            "name": "List of layers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.LayerService/List",
+            "params": [
+              {
+                "name": "startLayer",
+                "value": "",
+                "type": "query",
+                "description": "starting layer for the query"
+              },
+              {
+                "name": "endLayer",
+                "value": "",
+                "type": "query",
+                "description": "ending layer for the query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "adjusts the starting point for data"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "specifies max number of items to fetch"
+              },
+              {
+                "name": "sortOrder",
+                "value": "",
+                "type": "query",
+                "description": "specifies the sort order (default is ASC)"
+              }
+            ]
+          },
+          "docs": "List is a method that takes a \"LayerRequest\" body and returns an \"LayerList\".\nThis method is used to retrieve a list of layers based on the provided request parameters."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

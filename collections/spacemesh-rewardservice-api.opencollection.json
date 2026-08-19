@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Spacemesh AccountService RewardService API",
+    "version": "v2alpha1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "RewardService",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List of rewards",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/spacemesh.v2alpha1.RewardService/List"
+          },
+          "docs": "List is a method that takes a \"RewardRequest\" body and returns an \"RewardList\".\nThis method is used to retrieve a list of rewards based on the provided request parameters."
+        },
+        {
+          "info": {
+            "name": "List of rewards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/spacemesh.v2beta1.RewardService/List",
+            "params": [
+              {
+                "name": "startLayer",
+                "value": "",
+                "type": "query",
+                "description": "starting layer for the query"
+              },
+              {
+                "name": "endLayer",
+                "value": "",
+                "type": "query",
+                "description": "ending layer for the query"
+              },
+              {
+                "name": "coinbase",
+                "value": "",
+                "type": "query",
+                "description": "filter by coinbase"
+              },
+              {
+                "name": "smesher",
+                "value": "",
+                "type": "query",
+                "description": "filter by smesher"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query",
+                "description": "adjusts the starting point for data"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query",
+                "description": "specifies max number of items to fetch"
+              },
+              {
+                "name": "sortOrder",
+                "value": "",
+                "type": "query",
+                "description": "specifies the sort order by layer (default is ASC)"
+              }
+            ]
+          },
+          "docs": "List is a method that takes a \"RewardRequest\" body and returns an \"RewardList\".\nThis method is used to retrieve a list of rewards based on the provided request parameters."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
