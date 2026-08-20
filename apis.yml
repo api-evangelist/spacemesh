@@ -43,6 +43,16 @@ tags:
 - Layer 1
 - gRPC
 - Node API
+- Open-Source
+tags_raw:
+- Company
+- Crypto Infrastructure
+- Blockchain
+- Cryptocurrency
+- Proof of Space-Time
+- Layer 1
+- gRPC
+- Node API
 - Open Source
 maintainers:
 - FN: Kin Lane
@@ -120,6 +130,8 @@ apis:
   humanURL: https://github.com/spacemeshos/api
   baseURL: https://api.spacemesh.network
   tags:
+  - Network Service
+  tags_raw:
   - NetworkService
   properties:
   - type: OpenAPI
