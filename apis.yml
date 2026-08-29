@@ -12,6 +12,19 @@ description: >-
   spacemesh.io / spacemesh.network web and hosted-API domains are now parked and
   the last node release was April 2025 (project appears dormant).
 url: https://raw.githubusercontent.com/api-evangelist/spacemesh/refs/heads/main/apis.yml
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: true
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -191,6 +204,16 @@ apis:
   - type: Protobuf
     url: grpc/spacemesh/v1/node.proto
 common:
+- type: IssueTracker
+  url: https://github.com/spacemeshos/go-spacemesh/issues
+- type: Releases
+  url: https://github.com/spacemeshos/go-spacemesh/releases
+- type: SecurityPolicy
+  url: https://github.com/spacemeshos/go-spacemesh/blob/develop/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/spacemeshos/go-spacemesh/blob/develop/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/spacemeshos/go-spacemesh/blob/develop/CONTRIBUTING.md
 - type: Overlay
   url: overlays/spacemesh-v1-overlay.yaml
 - type: License
