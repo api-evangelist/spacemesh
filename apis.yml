@@ -143,7 +143,7 @@ apis:
   humanURL: https://github.com/spacemeshos/api
   baseURL: https://api.spacemesh.network
   tags:
-  - NetworkService
+  - Network Service
   tags_raw:
   - NetworkService
   properties:
