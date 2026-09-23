@@ -1,26 +1,24 @@
 generated: '2026-07-21'
 method: searched
 host: https://api.spacemesh.network
-notes: >-
-  No valid /.well-known discovery documents are served. The apex and API hosts
-  (spacemesh.io, api/testnet-api.spacemesh.network) are parked/for-sale, so all
-  paths return a 200 HTML parking page rather than a genuine document. No
-  security.txt, OIDC, or api-catalog is published. Recorded for audit; no
-  WellKnown scoring pointer is wired since no real catalog exists.
-documents:
+notes: No valid /.well-known discovery documents are served. The apex and API hosts (spacemesh.io, api/testnet-api.spacemesh.network)
+  are parked/for-sale, so all paths return a 200 HTML parking page rather than a genuine document. No
+  security.txt, OIDC, or api-catalog is published. Recorded for audit; no WellKnown scoring pointer is
+  wired since no real catalog exists.
+hosts:
+- host: https://api.spacemesh.network
+  documents:
   - path: /.well-known/security.txt
     status: 200
-    valid: false
     content_type: text/html
-    reason: parking page, not RFC 9116 security.txt
-    file: null
   - path: /.well-known/openid-configuration
     status: 200
-    valid: false
     content_type: text/html
-    file: null
   - path: /.well-known/api-catalog
     status: 200
-    valid: false
     content_type: text/html
-    file: null
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.

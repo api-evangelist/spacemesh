@@ -1,14 +1,8 @@
 {
   "provider": "spacemesh",
   "sources": [
-    "spacemesh-accountservice-api-openapi.yml",
-    "spacemesh-activationservice-api-openapi.yml",
-    "spacemesh-layerservice-api-openapi.yml",
-    "spacemesh-malfeasanceservice-api-openapi.yml",
-    "spacemesh-networkservice-api-openapi.yml",
-    "spacemesh-nodeservice-api-openapi.yml",
-    "spacemesh-rewardservice-api-openapi.yml",
-    "spacemesh-transactionservice-api-openapi.yml"
+    "_original/spacemesh-v1-openapi-original.json",
+    "_original/spacemesh-v2beta1-openapi-original.json"
   ],
   "outputs": [
     "spacemesh-accountservice-api-openapi.yml",
@@ -23,6 +17,28 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "spacemesh-v1-openapi-original.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "spacemesh-v2beta1-openapi-original.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "tag 'AccountService' spans 2 source specs (spacemesh-v1-openapi-original.json, spacemesh-v2beta1-openapi-original.json): per-path servers applied",
+    "tag 'ActivationService' spans 2 source specs (spacemesh-v1-openapi-original.json, spacemesh-v2beta1-openapi-original.json): per-path servers applied",
+    "tag 'LayerService' spans 2 source specs (spacemesh-v1-openapi-original.json, spacemesh-v2beta1-openapi-original.json): per-path servers applied",
+    "tag 'MalfeasanceService' spans 2 source specs (spacemesh-v1-openapi-original.json, spacemesh-v2beta1-openapi-original.json): per-path servers applied",
+    "tag 'NetworkService' spans 2 source specs (spacemesh-v1-openapi-original.json, spacemesh-v2beta1-openapi-original.json): per-path servers applied",
+    "tag 'NodeService' spans 2 source specs (spacemesh-v1-openapi-original.json, spacemesh-v2beta1-openapi-original.json): per-path servers applied",
+    "tag 'RewardService' spans 2 source specs (spacemesh-v1-openapi-original.json, spacemesh-v2beta1-openapi-original.json): per-path servers applied",
+    "tag 'TransactionService' spans 2 source specs (spacemesh-v1-openapi-original.json, spacemesh-v2beta1-openapi-original.json): per-path servers applied",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "spacemesh-accountservice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spacemesh-activationservice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spacemesh-layerservice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spacemesh-malfeasanceservice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spacemesh-networkservice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spacemesh-nodeservice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spacemesh-rewardservice-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "spacemesh-transactionservice-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
