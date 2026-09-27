@@ -55,7 +55,7 @@ paths:
       tags:
       - AccountService
       summary: List of accounts
-      operationId: AccountService_List
+      operationId: getSpacemeshV2beta1AccountServiceList
       parameters:
       - description: list of account addresses
         name: addresses
@@ -91,6 +91,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/googlerpcStatus'
+      x-operation-id-source: normalized
+      x-operation-id-original: AccountService_List
     servers:
     - url: https://testnet-api.spacemesh.network
 components:
@@ -142,22 +144,21 @@ components:
 
             by the client.'
           type: string
-    spacemeshv2alpha1AccountRequest:
+    spacemeshv2alpha1Account:
       type: object
       properties:
-        addresses:
-          type: array
-          title: list of account addresses
-          items:
-            type: string
-        limit:
+        address:
           type: string
-          format: uint64
-          title: specifies max number of items to fetch// bech32 format including HRP
-        offset:
+          title: account public address
+        current:
+          title: current state
+          $ref: '#/components/schemas/spacemeshv2alpha1AccountState'
+        projected:
+          title: projected state (includes pending txs)
+          $ref: '#/components/schemas/spacemeshv2alpha1AccountState'
+        template:
           type: string
-          format: uint64
-          title: adjusts the starting point for data
+          title: account template address
     spacemeshv2alpha1AccountState:
       type: object
       properties:
@@ -181,45 +182,22 @@ components:
           description: "A URL/resource name that uniquely identifies the type of the serialized\nprotocol buffer message. This string must contain at least\none \"/\" character. The last segment of the URL's path must represent\nthe fully qualified name of the type (as in\n`path/google.protobuf.Duration`). The name should be in a canonical form\n(e.g., leading \".\" is not accepted).\n\nIn practice, teams usually precompile into the binary all types that they\nexpect it to use in the context of Any. However, for URLs which use the\nscheme `http`, `https`, or no scheme, one can optionally set up a type\nserver that maps type URLs to message definitions as follows:\n\n* If no scheme is provided, `https` is assumed.\n* An HTTP GET on the URL must yield a [google.protobuf.Type][]\n  value in binary format, or produce an error.\n* Applications are allowed to cache lookup results based on the\n  URL, or have them precompiled into a binary to avoid any\n  lookup. Therefore, binary compatibility needs to be preserved\n  on changes to types. (Use versioned type names to manage\n  breaking changes.)\n\nNote: this functionality is not currently available in the official\nprotobuf release, and it is not used for type URLs beginning with\ntype.googleapis.com. As of May 2023, there are no widely used type server\nimplementations and no plans to implement one.\n\nSchemes other than `http`, `https` (or the empty scheme) might be\nused with implementation specific semantics."
           type: string
       additionalProperties: {}
-    spacemeshv2alpha1Account:
+    spacemeshv2alpha1AccountRequest:
       type: object
       properties:
-        address:
-          type: string
-          title: account public address
-        current:
-          title: current state
-          $ref: '#/components/schemas/spacemeshv2alpha1AccountState'
-        projected:
-          title: projected state (includes pending txs)
-          $ref: '#/components/schemas/spacemeshv2alpha1AccountState'
-        template:
-          type: string
-          title: account template address
-    spacemeshv2beta1AccountList:
-      type: object
-      properties:
-        accounts:
+        addresses:
           type: array
-          title: list of accounts
+          title: list of account addresses
           items:
-            type: object
-            $ref: '#/components/schemas/spacemeshv2beta1Account'
-    spacemeshv2beta1Account:
-      type: object
-      properties:
-        address:
+            type: string
+        limit:
           type: string
-          title: account public address
-        current:
-          title: current state
-          $ref: '#/components/schemas/spacemeshv2beta1AccountState'
-        projected:
-          title: projected state (includes pending txs)
-          $ref: '#/components/schemas/spacemeshv2beta1AccountState'
-        template:
+          format: uint64
+          title: specifies max number of items to fetch// bech32 format including HRP
+        offset:
           type: string
-          title: account template address
+          format: uint64
+          title: adjusts the starting point for data
     spacemeshv2beta1AccountState:
       type: object
       properties:
@@ -235,6 +213,30 @@ components:
           type: integer
           format: int64
           title: account balance as of layer X
+    spacemeshv2beta1Account:
+      type: object
+      properties:
+        address:
+          type: string
+          title: account public address
+        current:
+          title: current state
+          $ref: '#/components/schemas/spacemeshv2beta1AccountState'
+        projected:
+          title: projected state (includes pending txs)
+          $ref: '#/components/schemas/spacemeshv2beta1AccountState'
+        template:
+          type: string
+          title: account template address
+    spacemeshv2beta1AccountList:
+      type: object
+      properties:
+        accounts:
+          type: array
+          title: list of accounts
+          items:
+            type: object
+            $ref: '#/components/schemas/spacemeshv2beta1Account'
 x-refined-from:
 - spacemesh-v1-openapi-original.json
 - spacemesh-v2beta1-openapi-original.json
