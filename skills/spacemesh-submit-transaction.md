@@ -2,7 +2,7 @@
 name: Submit a Spacemesh transaction
 description: Parse, estimate gas for, and submit a signed transaction to a Spacemesh node, then track its state.
 api: openapi/spacemesh-v2beta1-openapi-original.json
-operations: [NodeService_Status, TransactionService_ParseTransaction, TransactionService_EstimateGas, TransactionService_SubmitTransaction, AccountService_List]
+operations: [getSpacemeshV2beta1NodeServiceStatus, postSpacemeshV2beta1TransactionServiceParseTransaction, postSpacemeshV2beta1TransactionServiceEstimateGas, postSpacemeshV2beta1TransactionServiceSubmitTransaction, getSpacemeshV2beta1AccountServiceList]
 ---
 
 # Submit a Spacemesh transaction

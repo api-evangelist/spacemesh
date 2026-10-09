@@ -2,7 +2,7 @@
 name: Read Spacemesh chain state
 description: Read accounts, transactions, layers and rewards from a Spacemesh node via the v2beta1 gRPC-gateway API.
 api: openapi/spacemesh-v2beta1-openapi-original.json
-operations: [NetworkService_Info, NodeService_Status, AccountService_List, TransactionService_List, RewardService_List, LayerService_List]
+operations: [getSpacemeshV2beta1NetworkServiceInfo, getSpacemeshV2beta1NodeServiceStatus, getSpacemeshV2beta1AccountServiceList, getSpacemeshV2beta1TransactionServiceList, getSpacemeshV2beta1RewardServiceList, getSpacemeshV2beta1LayerServiceList]
 ---
 
 # Read Spacemesh chain state
